@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1492662647 source:/home/juanpablo/ciencia-d-l-complutacion/algebra-abstracta/generador/main.cpp
+	<iostream>
+	<bitset>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+
