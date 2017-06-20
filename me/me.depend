@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1497931144 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/main.cpp
+	<iostream>
+	"Instruccion.h"
+
+1497931685 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/Instruccion.h
+	<iostream>
+	<vector>
+	<string>
+	"Funtion.h"
+
+1497655655 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/AuxFuntions.h
+	<iostream>
+	<string>
+	<vector>
+	"Instruccion.h"
+
+1497655661 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/AuxFuntions.cpp
+	"AuxFuntions.h"
+
+1497934971 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/Instruccion.cpp
+	"Instruccion.h"
+
+1497934640 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/Funtion.h
+	<sstream>
+	<iostream>
+	<vector>
+	<string>
+	"Registro.h"
+
+1497934850 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/Funtion.cpp
+	"Funtion.h"
+
+1497933344 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/Registro.h
+	<iostream>
+	<string>
+
+1497934755 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/Registro.cpp
+	"Registro.h"
+
