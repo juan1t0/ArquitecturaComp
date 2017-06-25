@@ -14,27 +14,27 @@ Registro::Registro(int n)
         }
     else if(n==2 || n==3){
             tipo = "procesos";
-            name = "$vi";
+            name = "$v"+intToString(n);
         }
     else if(n>3 && n<8){
             tipo="savers";
-            name = "$ai";
+            name = "$a"+intToString(n);
         }
     else if(n>7 && n<16){
             tipo="temporales";
-            name="$ti";
+            name="$t"+intToString(n);
         }
     else if(n>15 && n<24){
             tipo="operands";
-            name="$si";
+            name="$s"+intToString(n);
             }
     else if(n==24 || n==25){
             tipo="temporales";
-            name="$ti";
+            name="$t"+intToString(n);
             }
     else if(n==26 || n==27){
             tipo="reservado OS";
-            name="$ki";
+            name="$k"+intToString(n);
             }
     else if(n==28){
             tipo="global pointer";
@@ -52,10 +52,15 @@ Registro::Registro(int n)
             tipo="return address";
             name="$ra";
         }
-
 }
 
-Registro::~Registro()
-{
-    //dtor
+Registro::~Registro(){}
+
+vector<Registro> Registro::operator() (){
+    vector<Registro> R;
+    for(int k=0;k<32;k++){
+        Registro r(k);
+        R.push_back(r);
+    }
+    return R;
 }

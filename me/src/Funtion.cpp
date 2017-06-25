@@ -1,10 +1,6 @@
 #include "Funtion.h"
-vector<Registro> registros;
-
-//for(int k=0;k<32;k++){;
-   // Registro r(k);
-  //  registros.push_back(r);
-//}
+Registro re(0);
+vector<Registro> registros = re();
 
 string intToString(int a){
     stringstream ss;
@@ -16,4 +12,8 @@ int stringToInt(string b){
     int val;
     buffer>>val;
     return val;
+}
+Instruccion textCache(char *linea){
+
+
 }

@@ -11,4 +11,5 @@ using namespace std;
 ///funtions
 string intToString(int a);
 int stringToInt(string b);
+Instruccion textCache(char *linea);
 #endif // FUNTION_H

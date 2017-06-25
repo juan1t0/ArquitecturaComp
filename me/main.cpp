@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Instruccion.h"
+#include "Funtion.h"
 using namespace std;
 
 int main(){
@@ -15,7 +16,6 @@ while(true){
     cin>>mips;
     if(mips == "-1")
         break;
-
     Instruccion instr(mips);
     cout<<"instruccion de tipo: "<<instr.Type<<endl;
     cout<<"en bits: ";

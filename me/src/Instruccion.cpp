@@ -4,7 +4,13 @@
 #define r 16
 #define i 17
 #define j 2
-
+/**
+instrucciones tipo alu:
+instrucciones de carga:
+instrucciones de almacenamiento:
+instrucciones branch:
+instrucciones de salto:
+*/
 string R[r]={"add","addu","sub","mult","div","mfhi","mflo","and","or","xor","nor","slt","sll","srl","sra","jr"};
 int R_fn[r]={32,33,34,0,0,0,0,36,37,38,39,42,0,0,0,8};
 string I[i]={"addi","addiu","la","lw","lh","lb","sw","sh","sb","lui","andi","ori","xori","slti","beq","bne","bltz"};
@@ -65,6 +71,7 @@ Instruccion::Instruccion(string nome)
     this->name = nome;
     this->Type = typeofthis(name);
     fuller();
+    cout<<"-----"+nome<<endl;
 }
 Instruccion::~Instruccion(){}
 ///metodos

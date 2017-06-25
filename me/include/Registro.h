@@ -3,6 +3,8 @@
 ///includes
 #include <iostream>
 #include <string>
+#include <vector>
+#include "Funtion.h"
 
 using namespace std;
 ///registro
@@ -15,6 +17,8 @@ public:
 
     Registro(int n);
     virtual ~Registro();
+
+    vector<Registro> operator() ();
 };
 
 #endif // REGISTRO_H
