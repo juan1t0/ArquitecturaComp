@@ -1,0 +1,48 @@
+                                       	        				     registro
+
+								registros      	                			escrito
+
+								 |		| _	 _ 	 |   \   	          	 |    |
+
+    	 |				|  	 |====|  \ _/  >	 |    |		 |data |  	 |    |
+
+|PC|-> |text cache| ->	 |		|   X_   	  >ALU| ->	 |cache| ->	 |====|
+
+		 |				|		 |====| _/  \_ >	 |    |  	 |     |  	 |    |
+
+		 						 |		|	   		 |   /   	          	 |    |
+
+
+
+pc-> un puntero a char en el que se copie cada linea del txt
+
+text cache-> la parte en la que dividimos y 'analizamos' la instruccion
+
+**************************
+
+para esta parte, ya demos reconocer que instrucciones seran de carga, guardado, branch, salto, o alu, asi optimizamos las ejecuciones
+
+**************************
+
+registros-> claramente los registros, que ya estan creados en un vector, creo yo que desde que se ejecuta el programa
+
+ALU->no estoy 100% seguro de lo que hace, (fuera de sumar restar multiplicar y esas vainas)
+
+data cache-> este solo se usa para cargar o guardar, asi que es una funcion que revisa que hay en el registro tal y lo copia o lo chanca
+
+registro escrito->solo se usa en la carga y en las alu, en si es lo que retorna 
+
+
+/////////algunas cosillas//////////////////////
+
++ hacer que leea linea por linea del txt
+
++ funciones que:
+-reconozca si hay una etiqueta
+-reconozca registros por '$'
+
++ la ubicaion de las etiquetas deben estar guardas para no tener que revisar todo de nuevo
+
++ podriamos hacer variables de estado(ocupado/disponible), para el multiciclo, esto significaria que cada parte podria ser una clase, execpto los registros que me parece que se pueden usar (en el primer acceso) como un parametro para pasar, y (en el segundo) como un return  
+///////////////////////////////////////////////
+

@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1498548174 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/main.cpp
+	<iostream>
+	"Instruccion.h"
+	"Funtion.h"
+	<string.h>
+	<stdlib.h>
+	<bitset>
+	<math.h>
+
+1498532539 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/Instruccion.h
+	<iostream>
+	<vector>
+	<string>
+	"Funtion.h"
+
+1498545299 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/Funtion.h
+	<sstream>
+	<iostream>
+	<vector>
+	<string>
+	"Registro.h"
+	"Instruccion.h"
+
+1498532539 /home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/include/Registro.h
+	<iostream>
+	<string>
+	<vector>
+	"Funtion.h"
+
+1498547284 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/Funtion.cpp
+	"Funtion.h"
+
+1498539718 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/Instruccion.cpp
+	"Instruccion.h"
+	<string.h>
+
+1498532539 source:/home/juanpablo/ciencia-d-l-computacion/arqui-computadores/me/src/Registro.cpp
+	"Registro.h"
+
