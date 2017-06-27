@@ -5,15 +5,6 @@
 #define r 16
 #define i 17
 #define j 2
-
-
-/**
-instrucciones tipo alu:
-instrucciones de carga:
-instrucciones de almacenamiento:
-instrucciones branch:
-instrucciones de salto:
-*/
 string R[r]={"add","addu","sub","mult","div","mfhi","mflo","and","or","xor","nor","slt","sll","srl","sra","jr"};
 int R_fn[r]={32,33,34,0,0,0,0,36,37,38,39,42,0,0,0,8};
 string I[i]={"addi","addiu","la","lw","lh","lb","sw","sh","sb","lui","andi","ori","xori","slti","beq","bne","bltz"};
@@ -67,20 +58,6 @@ char typeofthis(string name){
         return '\0';
     }
 }
-void separar(vector<string> &argumentos, string resto){
-    string temp;
-    for(int a=0;a<resto.length();a++){
-        if(resto[a]==','){
-            argumentos.push_back(temp);
-            temp="";
-            continue;
-        }
-        if(resto[a]==' ')
-            continue;
-        temp+=resto[a];
-    }
-    argumentos.push_back(temp);
-}
 
 ///constructores
 Instruccion::Instruccion(string nome)
@@ -91,7 +68,6 @@ Instruccion::Instruccion(string nome)
     separar(arguments,resto);
     this->Type = typeofthis(name);
     fuller();
-    cout<<"-----"+nome<<endl;
 }
 Instruccion::~Instruccion(){}
 ///metodos
@@ -99,15 +75,14 @@ void Instruccion::fuller(void){
     int op=0;
     if (Type=='J'){
         this->instruc=find_posJ(name);
-        string brand;
-        cin>>brand;
+        string brand=arguments[0];
         op=J_op[instruc];
         bits.push_back(intToString(op));
         bits.push_back(brand);
     }
     if(Type == 'I'){
         this->instruc=find_posI(name);
-        string rs,rt,inmediate;
+        string rs=arguments[0],rt=arguments[1],inmediate=arguments[2];
         op=I_op[instruc];///registros y valor inmediato puede ser ingresado por el usurio recien aqui
         bits.push_back(intToString(op));
         bits.push_back(rs);
@@ -116,7 +91,7 @@ void Instruccion::fuller(void){
     }
     if(Type == 'R'){
         this->instruc=find_posR(name);
-        string rs,rt,rd,sh,fn=intToString(R_fn[instruc]);
+        string rs=arguments[0],rt=arguments[1],rd=arguments[2],sh="0",fn=intToString(R_fn[instruc]);
         op=0;///registros
         bits.push_back(intToString(op));
         bits.push_back(rs);

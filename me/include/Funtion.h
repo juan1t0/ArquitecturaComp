@@ -12,5 +12,8 @@ using namespace std;
 ///funtions
 string intToString(int a);
 int stringToInt(string b);
-//Instruccion textCache(char *linea);
+void separar(vector<string> &argumentos, string resto);
+void printI(char);
+void sleep(int);
+
 #endif // FUNTION_H
