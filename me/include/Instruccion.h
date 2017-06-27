@@ -13,13 +13,14 @@ class Instruccion
 {
     public:
         vector<string> bits;
+        vector<string> arguments;
         string name;
         char Type;
         int instruc;
 
         Instruccion(string nombre);
         ~Instruccion();
-        void fuller();
+        void fuller(void);
         void mostrarBinario(void);
 };
 

@@ -1,9 +1,12 @@
 #include "Instruccion.h"
+#include <string.h>
 
 ///globales
 #define r 16
 #define i 17
 #define j 2
+
+
 /**
 instrucciones tipo alu:
 instrucciones de carga:
@@ -60,15 +63,32 @@ char typeofthis(string name){
         return 'I';
     }
     else {
-        cout<<"no se encontro la instrunccion"<<endl;
+        cout<<"no se encontro la instruccion"<<endl;
         return '\0';
     }
+}
+void separar(vector<string> &argumentos, string resto){
+    string temp;
+    for(int a=0;a<resto.length();a++){
+        if(resto[a]==','){
+            argumentos.push_back(temp);
+            temp="";
+            continue;
+        }
+        if(resto[a]==' ')
+            continue;
+        temp+=resto[a];
+    }
+    argumentos.push_back(temp);
 }
 
 ///constructores
 Instruccion::Instruccion(string nome)
 {
-    this->name = nome;
+    int espacio=nome.find(' ');
+    this->name = nome.substr(0,espacio);
+    string resto=nome.substr(espacio+1,nome.length()-(espacio+2));
+    separar(arguments,resto);
     this->Type = typeofthis(name);
     fuller();
     cout<<"-----"+nome<<endl;
